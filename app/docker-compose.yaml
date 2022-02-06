@@ -1,0 +1,12 @@
+version: "3"
+services:
+  flask_server:
+    build: .
+    command: python3 app.py
+    network_mode: host
+    ports:
+      - 5000:5000
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "5"
